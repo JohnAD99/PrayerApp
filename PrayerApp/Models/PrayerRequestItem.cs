@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 namespace PrayerApp.Models
@@ -12,29 +7,29 @@ namespace PrayerApp.Models
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private string _message;
-        public string Message
+        private string _request;
+        public string Request
         {
-            get => _message;
+            get => _request;
             set
             {
-                if (_message != value)
+                if (_request != value)
                 {
-                    _message = value;
+                    _request = value;
                     OnPropertyChanged();
                 }
             }
         }
 
-        private int _prayerCount;
-        public int PrayerCount
+        private int _numberOfPrayers;
+        public int NumberOfPrayers
         {
-            get => _prayerCount;
+            get => _numberOfPrayers;
             set
             {
-                if (_prayerCount != value)
+                if (_numberOfPrayers != value)
                 {
-                    _prayerCount = value;
+                    _numberOfPrayers = value;
                     OnPropertyChanged();
                 }
             }

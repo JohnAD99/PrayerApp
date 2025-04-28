@@ -15,7 +15,6 @@ namespace PrayerApp.ViewModels
         public PrayerRequestsViewModel()
         {
             PrayerRequests = new ObservableCollection<PrayerRequestItem>();
-
             AddPrayerRequestCommand = new RelayCommand(AddPrayerRequest);
         }
 
@@ -23,10 +22,9 @@ namespace PrayerApp.ViewModels
         {
             var newItem = new PrayerRequestItem
             {
-                Message = $"New Prayer Request {PrayerRequests.Count + 1}: Please pray for...",
-                PrayerCount = 0
+                Request = $"Please pray for me. (Item {PrayerRequests.Count + 1})",
+                NumberOfPrayers = 17
             };
-
             PrayerRequests.Add(newItem);
         }
     }
