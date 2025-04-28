@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PrayerApp.Views.SettingsPage"
+             Title="Settings">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Default Urgency:" FontSize="Medium"/>
+        <Picker x:Name="UrgencyPicker"
+                Title="Select Urgency"
+                SelectedIndexChanged="UrgencyPicker_SelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Low</x:String>
+                    <x:String>Medium</x:String>
+                    <x:String>High</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Label x:Name="SelectedUrgencyLabel" FontSize="Small" TextColor="Gray"/>
+
+        <Label Text="Default Expiration (Days):" FontSize="Medium"/>
+        <Slider x:Name="ExpirationSlider"
+                Minimum="1"
+                Maximum="30"
+                Value="7"
+                ValueChanged="ExpirationSlider_ValueChanged"/>
+        <Label x:Name="SelectedExpirationLabel" FontSize="Small" TextColor="Gray"/>
+    </VerticalStackLayout>
+</ContentPage>
